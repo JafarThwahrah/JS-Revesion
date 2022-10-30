@@ -143,211 +143,192 @@ function project() {
 
 project();
 
-
-
 // Ex 11: Use reduce()  function to return the longest string in an array of strings.
 
-let arr = ["Java", "JavaScript", "Python", "C++", "PHP"]
+let arr = ["Java", "JavaScript", "Python", "C++", "PHP"];
 
-const longest = arr.reduce(
-    function (a, b) {
-        return a.length > b.length ? a : b;
-    }
-);
+const longest = arr.reduce(function (a, b) {
+  return a.length > b.length ? a : b;
+});
 
 console.log(longest);
 
-
-
-
 // Ex 12: Create a function displayName that, given the pokemon data, below, uses reduce to return an array containing the names of the characters.
 
-let pokemonData =[
-    {
-      "game_index": 76,
-      "version": {
-        "name": "red",
-        "url": "https://pokeapi.co/api/v2/version/1/"
-      }
+let pokemonData = [
+  {
+    game_index: 76,
+    version: {
+      name: "red",
+      url: "https://pokeapi.co/api/v2/version/1/",
     },
-    {
-      "game_index": 76,
-      "version": {
-        "name": "blue",
-        "url": "https://pokeapi.co/api/v2/version/2/"
-      }
+  },
+  {
+    game_index: 76,
+    version: {
+      name: "blue",
+      url: "https://pokeapi.co/api/v2/version/2/",
     },
-    {
-      "game_index": 76,
-      "version": {
-        "name": "yellow",
-        "url": "https://pokeapi.co/api/v2/version/3/"
-      }
+  },
+  {
+    game_index: 76,
+    version: {
+      name: "yellow",
+      url: "https://pokeapi.co/api/v2/version/3/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "gold",
-        "url": "https://pokeapi.co/api/v2/version/4/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "gold",
+      url: "https://pokeapi.co/api/v2/version/4/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "silver",
-        "url": "https://pokeapi.co/api/v2/version/5/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "silver",
+      url: "https://pokeapi.co/api/v2/version/5/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "crystal",
-        "url": "https://pokeapi.co/api/v2/version/6/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "crystal",
+      url: "https://pokeapi.co/api/v2/version/6/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "ruby",
-        "url": "https://pokeapi.co/api/v2/version/7/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "ruby",
+      url: "https://pokeapi.co/api/v2/version/7/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "sapphire",
-        "url": "https://pokeapi.co/api/v2/version/8/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "sapphire",
+      url: "https://pokeapi.co/api/v2/version/8/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "emerald",
-        "url": "https://pokeapi.co/api/v2/version/9/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "emerald",
+      url: "https://pokeapi.co/api/v2/version/9/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "firered",
-        "url": "https://pokeapi.co/api/v2/version/10/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "firered",
+      url: "https://pokeapi.co/api/v2/version/10/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "leafgreen",
-        "url": "https://pokeapi.co/api/v2/version/11/"
-      }
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "leafgreen",
+      url: "https://pokeapi.co/api/v2/version/11/",
     },
-    {
-      "game_index": 132,
-      "version": {
-        "name": "diamond",
-        "url": "https://pokeapi.co/api/v2/version/12/"
-      }
-    }
-    ];
+  },
+  {
+    game_index: 132,
+    version: {
+      name: "diamond",
+      url: "https://pokeapi.co/api/v2/version/12/",
+    },
+  },
+];
 
-    function Names(pokemonData){
-    let names = pokemonData.reduce(function(a , b ){
-         a.push(b.version.name)
-         return a ;
-        }, []);
+function Names(pokemonData) {
+  let names = pokemonData.reduce(function (a, b) {
+    a.push(b.version.name);
+    return a;
+  }, []);
 
-        // console.log(pokemonData[0].version.name);
+  // console.log(pokemonData[0].version.name);
 
-        return names;
-
-    }
-    
-
-    console.log(Names(pokemonData));
-
-
-    // Ex13: Write a function that takes the following array of objects, uses binary search to search for certain email input from the user, and return its value.
-
-
-    const emailArr = [ {
-        "name": "ude.Top",
-        "email": "Taya.Kerluke53@gmail.com",
-        "add": {
-        "street": " Felds", "suie": "Ste 231",
-        "city": "Tinamuth", "zcode": "07584-6653",
-        "geo": { "lat": "75.023", "lng": "-17.1824" }
-        },
-        "phone": "795-827-5446 x18366",
-        "website": "nico.com",
-        "company": {
-        "name": "Champlin, Barrows and me",
-        "catchPhrase": "Object user-facing orchestration",
-        "bs": " integrated content" 
-       },
-        "firstN": "Mida", "lastN": "Feey"
-        } ]
-       
-
-        function searchForEmail(array){
-
-            array.forEach(element=>{
-
-
-                return element.email ? element.email:'';
-
-            })
-            
-        }
-
-        console.log(emailArr);
-
-
-
-
-
-
-
-
-
-
-        
-let employee1 = {
-    firstName: 'Rawan',
-    sayHi: function(){
-        console.log("Hi Coach ! " + this.firstName);
-    }
+  return names;
 }
 
-employee1.sayHi() // Hi Coach ! Rawan?
+console.log(Names(pokemonData));
 
+// Ex13: Write a function that takes the following array of objects, uses binary search to search for certain email input from the user, and return its value.
+
+const emailArr = [
+  {
+    name: "ude.Top",
+    email: "Taya.Kerluke53@gmail.com",
+    add: {
+      street: " Felds",
+      suie: "Ste 231",
+      city: "Tinamuth",
+      zcode: "07584-6653",
+      geo: { lat: "75.023", lng: "-17.1824" },
+    },
+    phone: "795-827-5446 x18366",
+    website: "nico.com",
+    company: {
+      name: "Champlin, Barrows and me",
+      catchPhrase: "Object user-facing orchestration",
+      bs: " integrated content",
+    },
+    firstN: "Mida",
+    lastN: "Feey",
+  },
+];
+
+function searchForEmail(array) {
+    array.forEach(element =>{
+
+    
+  for (const key in element) {
+    // console.log(`${key}: ${element[key]}`);
+  `${key}`=='email' ? console.log(element[key]) : null;
+  }
+})
+}
+
+searchForEmail(emailArr);
+
+// Ex14: What is the output of the following JS code segments? and Why?
+
+let employee1 = {
+  firstName: "Rawan",
+  sayHi: function () {
+    console.log("Hi Coach ! " + this.firstName);
+  },
+};
+
+employee1.sayHi(); // Hi Coach ! Rawan?
 
 let employee2 = {
-    firstName: 'Rawan',
-    info: {
-        hasCar: true,
-        hasPet: true
-    },
-    printInfo: function(){
-        console.log("Car owner? " + this.hasCar);
-    }
-}
+  firstName: "Rawan",
+  info: {
+    hasCar: true,
+    hasPet: true,
+  },
+  printInfo: function () {
+    console.log("Car owner? " + this.hasCar);
+  },
+};
 
-employee2.printInfo() // undefied because we didnt enter inside the info, this here point on the object employee2?
-
-
-
+employee2.printInfo(); // undefied because we didnt enter inside the info, this here point on the object employee2?
 
 let employee3 = {
-    firstName: 'Rawan',
-    info: {
-        hasCar: true,
-        hasPet: true,
-        printAddress: function(){
-            return this.data.address;
-        },
-        data: {
-            address: "Zarqa"
-        }
+  firstName: "Rawan",
+  info: {
+    hasCar: true,
+    hasPet: true,
+    printAddress: function () {
+      return this.data.address;
     },
-}
+    data: {
+      address: "Zarqa",
+    },
+  },
+};
 
-console.log(employee3.info.printAddress()) //Zarqa, cuz this point on its perent which is info, and info contains both the address function and data which contain address ?
+console.log(employee3.info.printAddress()); //Zarqa, cuz this point on its perent which is info, and info contains both the address function and data which contain address ?
