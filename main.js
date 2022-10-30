@@ -315,7 +315,7 @@ let employee2 = {
   },
 };
 
-employee2.printInfo(); // undefied because we didnt enter inside the info, this here point on the object employee2?
+employee2.printInfo(); // undefied because we didnt get inside the info, this here point on the object employee2?
 
 let employee3 = {
   firstName: "Rawan",
